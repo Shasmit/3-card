@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lexend Deca", sans-serif;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+article{
+    max-width: 280px;
+    height: 450px;
+    padding: 42px;
+    position: relative;
+}
+
+article.sedan{
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 6px 0 0 6px;
+}
+
+article.suv{
+    background-color: hsl(184, 100%, 22%);
+}
+
+article.luxury{
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 5px 5px 0;
+}
+
+img{
+    margin-bottom: 35px;
+}
+
+h1{
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 24px;
+    color: hsl(0, 0%, 95%);
+}
+
+p{
+  color: hsla(0, 0%, 100%, 0.75);  
+  font-size: 14px;
+  line-height: 24px;
+}
+
+button{
+    position: absolute;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    padding: 14px;
+    width: 145px;
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid hsl(0, 0%, 95%);
+    font-family: inherit;
+    transition: all 0.2s ease-in-out;
+    bottom: 42px;
+}
+
+.sedan button{
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(31, 77%, 52%);
+}
+
+.suv button{
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury button{
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(179, 100%, 13%);
+}
+
+button:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+
+@media only screen and (max-width: 844px) {
+    body{
+        display: flex;
+        width: 100%;
+        overflow: scroll;
+        flex-wrap: wrap;
+    }
+
+    main{
+        padding: 50px 0;
+        flex-direction: column;
+    }
+    
+    article.sedan{
+        border-radius: 6px 6px 0 0;
+    }
+
+    article.luxury{
+        border-radius: 0 0 6px 6px;
+    }
+
+    article p{
+        font-size: 13px;
+    }
+
+}
